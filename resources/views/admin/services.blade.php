@@ -112,7 +112,7 @@
                         </td>
                         <td class="px-6 py-4">
                             @if($service->image)
-                                <img src="{{ $service->image_url }}" alt="{{ $service->title }}" class="w-12 h-12 object-cover rounded">
+                                <img src="{{ $service->image_url }}" alt="{{ $service->title }}" class="w-16 h-16 object-cover rounded-lg" loading="lazy">
                             @else
                                 <span class="text-slate-400 dark:text-slate-600 text-sm">Sin imagen</span>
                             @endif

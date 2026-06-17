@@ -101,4 +101,47 @@
             </form>
         @endif
     </div>
+    </div>
 </header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const html = document.documentElement;
+    const toggleDesktop = document.getElementById('dark-mode-toggle');
+    const toggleMobile = document.getElementById('dark-mode-toggle-mobile');
+
+    if (!toggleDesktop && !toggleMobile) return;
+
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+        html.classList.add('dark');
+    } else {
+        html.classList.remove('dark');
+    }
+
+    function toggleDarkMode() {
+        html.classList.toggle('dark');
+        const isDark = html.classList.contains('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+
+    if (toggleDesktop) {
+        toggleDesktop.addEventListener('click', toggleDarkMode);
+    }
+    if (toggleMobile) {
+        toggleMobile.addEventListener('click', toggleDarkMode);
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+            if (e.matches) {
+                html.classList.add('dark');
+            } else {
+                html.classList.remove('dark');
+            }
+        }
+    });
+});
+</script>

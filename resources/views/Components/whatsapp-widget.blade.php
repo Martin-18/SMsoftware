@@ -41,7 +41,6 @@
     </div>
 </div>
 
-@push('scripts')
 <script>
     (function() {
         const toggle = document.getElementById('whatsapp-toggle');
@@ -68,4 +67,3 @@
         }
     })();
 </script>
-@endpush

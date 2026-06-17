@@ -19,7 +19,7 @@
         {{-- Plan Básico --}}
         <div class="bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 transition-colors duration-300">
             <h3 class="text-xl font-bold text-slate-900 dark:text-white">PLAN BÁSICO – "Presencia Web"</h3>
-            <p class="text-3xl font-black text-blue-600 my-4">$500.000 COP</p>
+            <p class="text-3xl font-black text-blue-600 my-4">$450.000 COP</p>
             <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">Ideal para emprendedores y marcas personales.</p>
             <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-3 mb-8">
                 <li>✅ Diseño web personalizado (1 a 3 secciones)</li>
@@ -41,6 +41,7 @@
             <h3 class="text-xl font-bold text-slate-900 dark:text-white">PLAN INTERMEDIO – "Crecimiento Digital"</h3>
             <p class="text-3xl font-black text-blue-600 my-4">$800.000 COP</p>
             <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-3 mb-8">
+                <li>✅ Incluye todos los servicios del Plan Básico</li>
                 <li>✅ Diseño web profesional (hasta 5 secciones)</li>
                 <li>✅ Diseño 100% responsive</li>
                 <li>✅ Menú de navegación personalizado</li>
@@ -48,7 +49,7 @@
                 <li>✅ Integración con base de datos</li>
                 <li>✅ Panel de administrador para gestionar contenido</li>
                 <li>✅ Panel de estadísticas (visitas, productos)</li>
-                <li>✅ Entrega en 20 días hábiles</li>
+                <li>✅ Entrega en 15 días hábiles</li>
             </ul>
             <a href="https://wa.me/573105341232?text=Hola,%20me%20interesa%20el%20Plan%20Intermedio%20de%20Diseño"
                class="block text-center bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
@@ -61,12 +62,13 @@
             <h3 class="text-xl font-bold text-slate-900 dark:text-white">PLAN PREMIUM – "Presencia Profesional"</h3>
             <p class="text-3xl font-black text-blue-600 my-4">$1.200.000 COP</p>
             <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-3 mb-8">
+                <li>✅ Incluye todos los servicios del Plan Intermedio</li>
                 <li>✅ Diseño avanzado (hasta 7+ secciones)</li>
                 <li>✅ Menú con animaciones suaves</li>
                 <li>✅ Integración con Google Maps y horario</li>
                 <li>✅ Optimización SEO básica</li>
                 <li>✅ Formulario de contacto con envío automático</li>
-                <li>✅ Entrega en 25 días hábiles</li>
+                <li>✅ Entrega en 20 días hábiles</li>
             </ul>
             <a href="https://wa.me/573105341232?text=Hola,%20me%20interesa%20el%20Plan%20Premium%20de%20Diseño"
                class="block text-center bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">

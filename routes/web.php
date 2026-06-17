@@ -15,8 +15,8 @@ Route::get('/contacto', [ContactController::class, 'show'])->name('contact');
 Route::post('/contacto', [ContactController::class, 'store'])->name('contact.store')->middleware('throttle:5,1');
 
 // ─── Auth admin
-Route::get('/admin-login', [AdminController::class, 'showLoginForm'])->name('admin.login');
-Route::post('/admin-login', [AdminController::class, 'login'])->name('admin.login.post');
+Route::get('/admin', [AdminController::class, 'showLoginForm'])->name('admin.login'); //ruta para el administrador
+Route::post('/admin', [AdminController::class, 'login'])->name('admin.login.post'); 
 Route::post('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
 
 Route::middleware(['admin'])->group(function () {

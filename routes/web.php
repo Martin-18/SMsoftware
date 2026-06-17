@@ -11,7 +11,7 @@ Route::get('/',               fn() => view('main'))->name('home');
 Route::get('/diseno',         [ServiceController::class, 'design'])->name('design');
 Route::get('/ciberseguridad', [ServiceController::class, 'cybersecurity'])->name('cybersecurity');
 Route::get('/contacto',       [ContactController::class, 'show'])->name('contact');
-Route::post('/contacto',      [ContactController::class, 'store'])->name('contact.store');
+Route::post('/contacto',      [ContactController::class, 'store'])->name('contact.store')->middleware('throttle:5,1');
 
 // ─── Auth admin 
 Route::get('/admin-login',   [AdminController::class, 'showLoginForm'])->name('admin.login');

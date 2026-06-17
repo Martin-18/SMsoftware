@@ -27,7 +27,7 @@
                 <li>💾 Copias de seguridad diarias</li>
                 <li>✅ Certificado SSL activo</li>
             </ul>
-            <a href="https://wa.me/573000000000?text=Hola,%20estoy%20interesado%20en%20el%20Plan%20Escudo%20Esencial"
+            <a href="https://wa.me/573105341232?text=Hola,%20estoy%20interesado%20en%20el%20Plan%20Escudo%20Esencial"
                class="block text-center bg-slate-900 text-white py-3 rounded-lg font-semibold hover:bg-slate-800 transition">
                 Seleccionar Plan
             </a>
@@ -44,7 +44,7 @@
                 <li>⚙️ Optimización de cabeceras de seguridad</li>
                 <li>📞 Soporte técnico prioritario</li>
             </ul>
-            <a href="https://wa.me/573000000000?text=Hola,%20estoy%20interesado%20en%20el%20Plan%20Defensa%20Proactiva"
+            <a href="https://wa.me/573105341232?text=Hola,%20estoy%20interesado%20en%20el%20Plan%20Defensa%20Proactiva"
                class="block text-center bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
                 Seleccionar Plan
             </a>
@@ -60,7 +60,7 @@
                 <li>⚡ Respuesta a incidentes 24/7</li>
                 <li>🎓 Capacitación al personal</li>
             </ul>
-            <a href="https://wa.me/573000000000?text=Hola,%20estoy%20interesado%20en%20el%20Plan%20Blindaje%20Total"
+            <a href="https://wa.me/573105341232?text=Hola,%20estoy%20interesado%20en%20el%20Plan%20Blindaje%20Total"
                class="block text-center bg-slate-900 text-white py-3 rounded-lg font-semibold hover:bg-slate-800 transition">
                 Seleccionar Plan
             </a>

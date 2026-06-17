@@ -14,9 +14,9 @@ class StoreContactRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name'             => ['required', 'string', 'max:100'],
-            'email'            => ['required', 'email', 'max:150'],
-            'phone'            => ['nullable', 'string', 'max:20'],
+            'name'             => ['required', 'string', 'max:100', 'regex:/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/'],
+            'email'            => ['required', 'email:rfc,dns', 'max:150'],
+            'phone'            => ['nullable', 'regex:/^(\+57\s?)?(\d{3}\s?\d{3}\s?\d{4})$/'],
             'service_interest' => ['required', 'in:diseno,ciberseguridad,otro'],
             'message'          => ['required', 'string', 'min:10', 'max:2000'],
         ];
@@ -26,8 +26,10 @@ class StoreContactRequest extends FormRequest
     {
         return [
             'name.required'             => 'El nombre es obligatorio.',
+            'name.regex'                => 'El nombre solo puede contener letras y espacios.',
             'email.required'            => 'El correo es obligatorio.',
             'email.email'               => 'Ingresa un correo válido.',
+            'phone.regex'               => 'El formato del teléfono debe ser: +57 300 000 0000 o 300 000 0000',
             'service_interest.required' => 'Selecciona el servicio de tu interés.',
             'service_interest.in'       => 'Servicio no válido.',
             'message.required'          => 'El mensaje es obligatorio.',

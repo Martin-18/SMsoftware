@@ -75,7 +75,7 @@
             Soluciones digitales completas para impulsar y proteger tu negocio en el Quindío.
         </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {{-- Diseño --}}
             <div class="group bg-slate-50 dark:bg-slate-800 hover:bg-blue-600 dark:hover:bg-blue-700 border border-slate-200 dark:border-slate-700 hover:border-blue-600 dark:hover:border-blue-500 rounded-2xl p-8 transition-all duration-300 animate-on-scroll card-hover-effect">
                 <div class="w-14 h-14 bg-blue-100 group-hover:bg-white/20 rounded-xl flex items-center justify-center text-2xl mb-6 transition">
@@ -103,6 +103,21 @@
                 <a href="{{ route('cybersecurity') }}"
                    class="inline-block text-slate-700 dark:text-slate-300 group-hover:text-white font-semibold text-sm hover:underline transition">
                     Ver planes →
+                </a>
+            </div>
+
+            {{-- Servicios Técnicos --}}
+            <div class="group bg-slate-50 dark:bg-slate-800 hover:bg-blue-600 dark:hover:bg-blue-700 border border-slate-200 dark:border-slate-700 hover:border-blue-600 dark:hover:border-blue-500 rounded-2xl p-8 transition-all duration-300 animate-on-scroll delay-200 card-hover-effect">
+                <div class="w-14 h-14 bg-blue-100 group-hover:bg-white/20 rounded-xl flex items-center justify-center text-2xl mb-6 transition">
+                    🔧
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-white mb-3 transition">Servicios Técnicos</h3>
+                <p class="text-slate-500 dark:text-slate-400 group-hover:text-blue-100 text-sm leading-relaxed mb-6 transition">
+                    Instalación de programas, actualización de software y mantenimiento de equipos.
+                </p>
+                <a href="{{ route('technical.services') }}"
+                   class="inline-block text-blue-600 group-hover:text-white font-semibold text-sm hover:underline transition">
+                    Ver servicios →
                 </a>
             </div>
         </div>

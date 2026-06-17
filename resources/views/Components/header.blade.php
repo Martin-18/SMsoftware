@@ -20,6 +20,10 @@
                class="hover:text-blue-600 dark:hover:text-blue-400 transition {{ request()->routeIs('cybersecurity') ? 'text-blue-600 dark:text-blue-400 font-semibold' : '' }}">
                 Ciberseguridad
             </a>
+            <a href="{{ route('technical.services') }}"
+               class="hover:text-blue-600 dark:hover:text-blue-400 transition {{ request()->routeIs('technical.services') ? 'text-blue-600 dark:text-blue-400 font-semibold' : '' }}">
+                Servicios Técnicos
+            </a>
         </nav>
 
         {{-- Botón admin / logout + Dark mode toggle --}}
@@ -83,6 +87,10 @@
         <a href="{{ route('cybersecurity') }}"
            class="block text-slate-700 dark:text-slate-300 {{ request()->routeIs('cybersecurity') ? 'text-blue-600 dark:text-blue-400 font-semibold' : '' }}">
             Ciberseguridad
+        </a>
+        <a href="{{ route('technical.services') }}"
+           class="block text-slate-700 dark:text-slate-300 {{ request()->routeIs('technical.services') ? 'text-blue-600 dark:text-blue-400 font-semibold' : '' }}">
+            Servicios Técnicos
         </a>
 
         @if(session('admin_logged_in'))

@@ -85,7 +85,7 @@
                 <div class="p-6 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
                     @if($service->image)
                     <div class="mb-4">
-                        <img src="{{ $service->image_url }}" alt="{{ $service->title }}" class="w-full h-48 object-cover rounded-lg">
+                        <img src="{{ $service->image_url }}" alt="{{ $service->title }}" class="w-full h-48 object-cover rounded-lg" loading="lazy">
                     </div>
                     @endif
                     <h3 class="font-bold text-lg text-slate-900 dark:text-white">{{ $service->title }}</h3>
@@ -95,6 +95,33 @@
         </div>
     </section>
     @endif
+
+    {{-- ¿Por qué elegirnos? --}}
+    <section class="mt-20">
+        <h2 class="text-3xl font-bold text-center text-slate-900 dark:text-white mb-12">¿Por qué elegir nuestros servicios técnicos?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="text-center p-6">
+                <div class="text-4xl mb-4">🛡️</div>
+                <h3 class="font-bold text-slate-900 dark:text-white mb-2">Garantía de Satisfacción</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400">No cobramos si no quedas satisfecho con el servicio</p>
+            </div>
+            <div class="text-center p-6">
+                <div class="text-4xl mb-4">⚡</div>
+                <h3 class="font-bold text-slate-900 dark:text-white mb-2">Soporte Rápido</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400">Respuesta inmediata vía WhatsApp y atención local</p>
+            </div>
+            <div class="text-center p-6">
+                <div class="text-4xl mb-4">💰</div>
+                <h3 class="font-bold text-slate-900 dark:text-white mb-2">Precios Competitivos</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400">Tarifas accesibles adaptadas a tu presupuesto</p>
+            </div>
+            <div class="text-center p-6">
+                <div class="text-4xl mb-4">👨‍💻</div>
+                <h3 class="font-bold text-slate-900 dark:text-white mb-2">Técnicos Certificados</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400">Personal capacitado con experiencia comprobada</p>
+            </div>
+        </div>
+    </section>
 
 </div>
 @endsection

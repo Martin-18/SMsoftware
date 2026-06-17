@@ -155,8 +155,8 @@
             <div class="text-center animate-on-scroll">
                 {{-- Avatar con imagen real --}}
                 <div class="w-28 h-28 rounded-full mx-auto mb-5 overflow-hidden border-4 border-blue-600 dark:border-blue-500 shadow-lg">
-                    @if(file_exists(public_path('images/team/martin.jpg')))
-                        <img src="{{ asset('images/team/martin.jpg') }}" alt="Martín - SMsoftware" class="w-full h-full object-cover">
+                    @if(file_exists(public_path('images/team/martin.jpg.jpeg')))
+                        <img src="{{ asset('images/team/martin.jpg.jpeg') }}" alt="Martín - SMsoftware" class="w-full h-full object-cover">
                     @else
                         <div class="w-full h-full bg-blue-600 flex items-center justify-center">
                             <span class="text-white text-3xl font-black">M</span>
@@ -173,8 +173,8 @@
             <div class="text-center animate-on-scroll delay-200">
                 {{-- Avatar con imagen real --}}
                 <div class="w-28 h-28 rounded-full mx-auto mb-5 overflow-hidden border-4 border-slate-700 dark:border-slate-600 shadow-lg">
-                    @if(file_exists(public_path('images/team/samuel.jpg')))
-                        <img src="{{ asset('images/team/samuel.jpg') }}" alt="Samuel - SMsoftware" class="w-full h-full object-cover">
+                    @if(file_exists(public_path('images/team/samuel.jpg.jpg')))
+                        <img src="{{ asset('images/team/samuel.jpg.jpg') }}" alt="Samuel - SMsoftware" class="w-full h-full object-cover">
                     @else
                         <div class="w-full h-full bg-slate-700 flex items-center justify-center">
                             <span class="text-white text-3xl font-black">S</span>

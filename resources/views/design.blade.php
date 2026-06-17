@@ -84,7 +84,7 @@
                 <div class="p-6 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
                     @if($service->image)
                     <div class="mb-4">
-                        <img src="{{ $service->image_url }}" alt="{{ $service->title }}" class="w-full h-48 object-cover rounded-lg">
+                        <img src="{{ $service->image_url }}" alt="{{ $service->title }}" class="w-full h-48 object-cover rounded-lg" loading="lazy">
                     </div>
                     @endif
                     <h3 class="font-bold text-lg text-slate-900 dark:text-white">{{ $service->title }}</h3>

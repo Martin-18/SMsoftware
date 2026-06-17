@@ -82,6 +82,11 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             @foreach($services as $service)
                 <div class="p-6 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
+                    @if($service->image)
+                    <div class="mb-4">
+                        <img src="{{ $service->image_url }}" alt="{{ $service->title }}" class="w-full h-48 object-cover rounded-lg">
+                    </div>
+                    @endif
                     <h3 class="font-bold text-lg text-slate-900 dark:text-white">{{ $service->title }}</h3>
                     <p class="text-slate-600 dark:text-slate-400 mt-2 text-sm leading-relaxed">{{ $service->description }}</p>
                 </div>
@@ -89,6 +94,33 @@
         </div>
     </section>
     @endif
+
+    {{-- Características adicionales --}}
+    <section class="mt-20">
+        <h2 class="text-3xl font-bold text-center text-slate-900 dark:text-white mb-12">¿Por qué elegir nuestro diseño web?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="text-center p-6">
+                <div class="text-4xl mb-4">📱</div>
+                <h3 class="font-bold text-slate-900 dark:text-white mb-2">100% Responsive</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400">Se adapta perfectamente a cualquier dispositivo</p>
+            </div>
+            <div class="text-center p-6">
+                <div class="text-4xl mb-4">⚡</div>
+                <h3 class="font-bold text-slate-900 dark:text-white mb-2">Ultra Rápido</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400">Optimizado para cargar en segundos</p>
+            </div>
+            <div class="text-center p-6">
+                <div class="text-4xl mb-4">🔍</div>
+                <h3 class="font-bold text-slate-900 dark:text-white mb-2">SEO Optimizado</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400">Preparado para posicionamiento en buscadores</p>
+            </div>
+            <div class="text-center p-6">
+                <div class="text-4xl mb-4">🛠️</div>
+                <h3 class="font-bold text-slate-900 dark:text-white mb-2">Fácil de Administrar</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400">Panel intuitivo para gestionar tu contenido</p>
+            </div>
+        </div>
+    </section>
 
 </div>
 @endsection

@@ -40,6 +40,7 @@
                     <ul class="space-y-2 text-sm">
                         <li><a href="{{ route('design') }}" class="hover:text-white dark:hover:text-slate-200 transition">Diseño Web</a></li>
                         <li><a href="{{ route('cybersecurity') }}" class="hover:text-white dark:hover:text-slate-200 transition">Ciberseguridad</a></li>
+                        <li><a href="{{ route('technical.services') }}" class="hover:text-white dark:hover:text-slate-200 transition">Servicios Técnicos</a></li>
                         <li><a href="{{ route('contact') }}" class="hover:text-white dark:hover:text-slate-200 transition">Solicitar cotización</a></li>
                     </ul>
                 </div>
@@ -71,67 +72,82 @@
 
     {{-- Dark mode JavaScript --}}
     <script>
-        // Dark mode functionality
-        (function() {
-            const html = document.documentElement;
-            const toggleDesktop = document.getElementById('dark-mode-toggle');
-            const toggleMobile = document.getElementById('dark-mode-toggle-mobile');
+        document.addEventListener('DOMContentLoaded', function() {
+            // Dark mode functionality
+            (function() {
+                const html = document.documentElement;
+                const toggleDesktop = document.getElementById('dark-mode-toggle');
+                const toggleMobile = document.getElementById('dark-mode-toggle-mobile');
 
-            // Check for saved preference or system preference
-            const savedTheme = localStorage.getItem('theme');
-            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                console.log('Dark mode script loaded');
+                console.log('Toggle desktop:', toggleDesktop);
+                console.log('Toggle mobile:', toggleMobile);
 
-            // Set initial theme
-            if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-                html.classList.add('dark');
-            } else {
-                html.classList.remove('dark');
-            }
+                // Check for saved preference or system preference
+                const savedTheme = localStorage.getItem('theme');
+                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-            // Toggle function
-            function toggleDarkMode() {
-                html.classList.toggle('dark');
-                const isDark = html.classList.contains('dark');
-                localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            }
-
-            // Add event listeners
-            if (toggleDesktop) toggleDesktop.addEventListener('click', toggleDarkMode);
-            if (toggleMobile) toggleMobile.addEventListener('click', toggleDarkMode);
-
-            // Listen for system theme changes
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-                if (!localStorage.getItem('theme')) {
-                    if (e.matches) {
-                        html.classList.add('dark');
-                    } else {
-                        html.classList.remove('dark');
-                    }
+                // Set initial theme
+                if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+                    html.classList.add('dark');
+                    console.log('Dark mode enabled on load');
+                } else {
+                    html.classList.remove('dark');
+                    console.log('Light mode enabled on load');
                 }
-            });
-        })();
 
-        // Scroll animations
-        (function() {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
+                // Toggle function
+                function toggleDarkMode() {
+                    html.classList.toggle('dark');
+                    const isDark = html.classList.contains('dark');
+                    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                    console.log('Dark mode toggled:', isDark);
+                }
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
+                // Add event listeners
+                if (toggleDesktop) {
+                    toggleDesktop.addEventListener('click', toggleDarkMode);
+                    console.log('Desktop click listener added');
+                }
+                if (toggleMobile) {
+                    toggleMobile.addEventListener('click', toggleDarkMode);
+                    console.log('Mobile click listener added');
+                }
+
+                // Listen for system theme changes
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                    if (!localStorage.getItem('theme')) {
+                        if (e.matches) {
+                            html.classList.add('dark');
+                        } else {
+                            html.classList.remove('dark');
+                        }
                     }
                 });
-            }, observerOptions);
+            })();
 
-            // Observe all elements with animate-on-scroll class
-            document.querySelectorAll('.animate-on-scroll').forEach(el => {
-                observer.observe(el);
-            });
-        })();
+            // Scroll animations
+            (function() {
+                const observerOptions = {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.1
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, observerOptions);
+
+                // Observe all elements with animate-on-scroll class
+                document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                    observer.observe(el);
+                });
+            })();
+        });
     </script>
 
     @stack('scripts')

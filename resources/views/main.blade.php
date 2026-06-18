@@ -3,7 +3,7 @@
 @section('content')
 
 {{-- ─── Hero ──────────────────────────────────────────────────────────────── --}}
-<section class="bg-slate-900 dark:bg-slate-950 text-white py-24 overflow-hidden transition-colors duration-300">
+<section class="bg-slate-950 text-white py-24 overflow-hidden ">
     <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
 
         {{-- Texto --}}
@@ -13,10 +13,10 @@
             </span>
             <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight tracking-tight">
                 Diseño Web y<br>
-                <span class="text-blue-400 dark:text-blue-500">Ciberseguridad</span><br>
+                <span class="text-blue-500">Ciberseguridad</span><br>
                 para tu negocio
             </h1>
-            <p class="text-lg text-slate-400 dark:text-slate-300 mb-10 max-w-lg">
+            <p class="text-lg text-slate-300 mb-10 max-w-lg">
                 En SMsoftware construimos tu presencia digital con páginas modernas y protegemos tu información con soluciones proactivas.
             </p>
             <div class="flex flex-wrap gap-4">
@@ -68,21 +68,21 @@
 </section>
 
 {{-- ─── Servicios ─────────────────────────────────────────────────────────── --}}
-<section class="py-20 bg-white dark:bg-slate-900 transition-colors duration-300" id="servicios">
+<section class="py-20 bg-slate-900 " id="servicios">
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center text-slate-900 dark:text-white mb-4 animate-on-scroll">Nuestros Servicios</h2>
-        <p class="text-center text-slate-500 dark:text-slate-400 mb-14 max-w-xl mx-auto animate-on-scroll delay-100">
+        <h2 class="text-3xl font-bold text-center text-white mb-4 animate-on-scroll">Nuestros Servicios</h2>
+        <p class="text-center text-slate-400 mb-14 max-w-xl mx-auto animate-on-scroll delay-100">
             Soluciones digitales completas para impulsar y proteger tu negocio en el Quindío.
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {{-- Diseño --}}
-            <div class="group bg-slate-50 dark:bg-slate-800 hover:bg-blue-600 dark:hover:bg-blue-700 border border-slate-200 dark:border-slate-700 hover:border-blue-600 dark:hover:border-blue-500 rounded-2xl p-8 transition-all duration-300 animate-on-scroll card-hover-effect">
+            <div class="group bg-slate-800 hover:bg-blue-700 border border-slate-700 hover:border-blue-500 rounded-2xl p-8 transition-all duration-300 animate-on-scroll card-hover-effect">
                 <div class="w-14 h-14 bg-blue-100 group-hover:bg-white/20 rounded-xl flex items-center justify-center text-2xl mb-6 transition">
                     🖥️
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-white mb-3 transition">Diseño Web</h3>
-                <p class="text-slate-500 dark:text-slate-400 group-hover:text-blue-100 text-sm leading-relaxed mb-6 transition">
+                <h3 class="text-xl font-bold text-white group-hover:text-white mb-3 transition">Diseño Web</h3>
+                <p class="text-slate-400 group-hover:text-blue-100 text-sm leading-relaxed mb-6 transition">
                     Páginas web corporativas, landing pages y tiendas online. Responsive, rápidas y administrables.
                 </p>
                 <a href="{{ route('design') }}"
@@ -92,27 +92,27 @@
             </div>
 
             {{-- Ciberseguridad --}}
-            <div class="group bg-slate-50 dark:bg-slate-800 hover:bg-slate-800 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 hover:border-slate-800 dark:hover:border-slate-600 rounded-2xl p-8 transition-all duration-300 animate-on-scroll delay-200 card-hover-effect">
+            <div class="group bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-slate-600 rounded-2xl p-8 transition-all duration-300 animate-on-scroll delay-200 card-hover-effect">
                 <div class="w-14 h-14 bg-slate-200 group-hover:bg-white/20 rounded-xl flex items-center justify-center text-2xl mb-6 transition">
                     🛡️
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-white mb-3 transition">Ciberseguridad</h3>
-                <p class="text-slate-500 dark:text-slate-400 group-hover:text-slate-300 text-sm leading-relaxed mb-6 transition">
+                <h3 class="text-xl font-bold text-white group-hover:text-white mb-3 transition">Ciberseguridad</h3>
+                <p class="text-slate-400 group-hover:text-slate-300 text-sm leading-relaxed mb-6 transition">
                     Auditorías, protección de infraestructura y cumplimiento normativo para empresas locales.
                 </p>
                 <a href="{{ route('cybersecurity') }}"
-                   class="inline-block text-slate-700 dark:text-slate-300 group-hover:text-white font-semibold text-sm hover:underline transition">
+                   class="inline-block text-slate-300 group-hover:text-white font-semibold text-sm hover:underline transition">
                     Ver planes →
                 </a>
             </div>
 
             {{-- Servicios Técnicos --}}
-            <div class="group bg-slate-50 dark:bg-slate-800 hover:bg-blue-600 dark:hover:bg-blue-700 border border-slate-200 dark:border-slate-700 hover:border-blue-600 dark:hover:border-blue-500 rounded-2xl p-8 transition-all duration-300 animate-on-scroll delay-200 card-hover-effect">
+            <div class="group bg-slate-800 hover:bg-blue-700 border border-slate-700 hover:border-blue-500 rounded-2xl p-8 transition-all duration-300 animate-on-scroll delay-200 card-hover-effect">
                 <div class="w-14 h-14 bg-blue-100 group-hover:bg-white/20 rounded-xl flex items-center justify-center text-2xl mb-6 transition">
                     🔧
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-white mb-3 transition">Servicios Técnicos</h3>
-                <p class="text-slate-500 dark:text-slate-400 group-hover:text-blue-100 text-sm leading-relaxed mb-6 transition">
+                <h3 class="text-xl font-bold text-white group-hover:text-white mb-3 transition">Servicios Técnicos</h3>
+                <p class="text-slate-400 group-hover:text-blue-100 text-sm leading-relaxed mb-6 transition">
                     Instalación de programas, actualización de software y mantenimiento de equipos.
                 </p>
                 <a href="{{ route('technical.services') }}"
@@ -125,36 +125,36 @@
 </section>
 
 {{-- ─── Por qué elegirnos ─────────────────────────────────────────────────── --}}
-<section class="py-16 bg-slate-50 dark:bg-slate-800 transition-colors duration-300">
+<section class="py-16 bg-slate-800 ">
     <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto text-center">
             <div>
-                <div class="text-3xl font-black text-blue-600 dark:text-blue-500 mb-2 animate-on-scroll">100%</div>
-                <p class="text-sm text-slate-500 dark:text-slate-400">Sitios responsive y optimizados para SEO</p>
+                <div class="text-3xl font-black text-blue-500 mb-2 animate-on-scroll">100%</div>
+                <p class="text-sm text-slate-400">Sitios responsive y optimizados para SEO</p>
             </div>
             <div>
-                <div class="text-3xl font-black text-blue-600 dark:text-blue-500 mb-2 animate-on-scroll delay-100">24h</div>
-                <p class="text-sm text-slate-500 dark:text-slate-400">Tiempo máximo de respuesta a tu consulta</p>
+                <div class="text-3xl font-black text-blue-500 mb-2 animate-on-scroll delay-100">24h</div>
+                <p class="text-sm text-slate-400">Tiempo máximo de respuesta a tu consulta</p>
             </div>
             <div>
-                <div class="text-3xl font-black text-blue-600 dark:text-blue-500 mb-2 animate-on-scroll delay-200">Ley 1581</div>
-                <p class="text-sm text-slate-500 dark:text-slate-400">Cumplimiento normativo de datos en Colombia</p>
+                <div class="text-3xl font-black text-blue-500 mb-2 animate-on-scroll delay-200">Ley 1581</div>
+                <p class="text-sm text-slate-400">Cumplimiento normativo de datos en Colombia</p>
             </div>
         </div>
     </div>
 </section>
 
 {{-- ─── Equipo ─────────────────────────────────────────────────────────────── --}}
-<section class="py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
+<section class="py-20 bg-slate-900 ">
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center text-slate-900 dark:text-white mb-4 animate-on-scroll">Nuestro Equipo</h2>
-        <p class="text-center text-slate-500 dark:text-slate-400 mb-14 animate-on-scroll delay-100">Dos especialistas, una sola misión: hacer crecer tu negocio.</p>
+        <h2 class="text-3xl font-bold text-center text-white mb-4 animate-on-scroll">Nuestro Equipo</h2>
+        <p class="text-center text-slate-400 mb-14 animate-on-scroll delay-100">Dos especialistas, una sola misión: hacer crecer tu negocio.</p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-2xl mx-auto">
             {{-- Martin --}}
             <div class="text-center animate-on-scroll">
                 {{-- Avatar con imagen real --}}
-                <div class="w-28 h-28 rounded-full mx-auto mb-5 overflow-hidden border-4 border-blue-600 dark:border-blue-500 shadow-lg">
+                <div class="w-28 h-28 rounded-full mx-auto mb-5 overflow-hidden border-4 border-blue-500 shadow-lg">
                     @if(file_exists(public_path('images/team/martin.jpg.jpeg')))
                         <img src="{{ asset('images/team/martin.jpg.jpeg') }}" alt="Martín - SMsoftware" class="w-full h-full object-cover">
                     @else
@@ -163,16 +163,16 @@
                         </div>
                     @endif
                 </div>
-                <h3 class="font-bold text-lg text-slate-900 dark:text-white">Martín</h3>
-                <p class="text-blue-600 dark:text-blue-500 font-medium text-sm">Diseño Web & Frontend</p>
-                <p class="text-slate-500 dark:text-slate-400 text-sm mt-2 max-w-xs mx-auto">
+                <h3 class="font-bold text-lg text-white">Martín</h3>
+                <p class="text-blue-500 font-medium text-sm">Diseño Web & Frontend</p>
+                <p class="text-slate-400 text-sm mt-2 max-w-xs mx-auto">
                     Especialista en interfaces modernas, UX y desarrollo web con Laravel.
                 </p>
             </div>
             {{-- Samuel --}}
             <div class="text-center animate-on-scroll delay-200">
                 {{-- Avatar con imagen real --}}
-                <div class="w-28 h-28 rounded-full mx-auto mb-5 overflow-hidden border-4 border-slate-700 dark:border-slate-600 shadow-lg">
+                <div class="w-28 h-28 rounded-full mx-auto mb-5 overflow-hidden border-4 border-slate-600 shadow-lg">
                     @if(file_exists(public_path('images/team/samuel.jpg.jpg')))
                         <img src="{{ asset('images/team/samuel.jpg.jpg') }}" alt="Samuel - SMsoftware" class="w-full h-full object-cover">
                     @else
@@ -181,9 +181,9 @@
                         </div>
                     @endif
                 </div>
-                <h3 class="font-bold text-lg text-slate-900 dark:text-white">Samuel</h3>
-                <p class="text-blue-600 dark:text-blue-500 font-medium text-sm">Ciberseguridad & Redes</p>
-                <p class="text-slate-500 dark:text-slate-400 text-sm mt-2 max-w-xs mx-auto">
+                <h3 class="font-bold text-lg text-white">Samuel</h3>
+                <p class="text-blue-500 font-medium text-sm">Ciberseguridad & Redes</p>
+                <p class="text-slate-400 text-sm mt-2 max-w-xs mx-auto">
                     Experto en protección de infraestructura digital y análisis de vulnerabilidades.
                 </p>
             </div>
@@ -192,14 +192,14 @@
 </section>
 
 {{-- ─── CTA final ──────────────────────────────────────────────────────────── --}}
-<section class="bg-blue-600 dark:bg-blue-700 text-white py-20 transition-colors duration-300">
+<section class="bg-blue-700 text-white py-20 ">
     <div class="container mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold mb-4 animate-on-scroll">¿Listo para dar el siguiente paso?</h2>
-        <p class="text-blue-100 dark:text-blue-200 mb-8 max-w-lg mx-auto animate-on-scroll delay-100">
+        <p class="text-blue-200 mb-8 max-w-lg mx-auto animate-on-scroll delay-100">
             Cuéntanos tu proyecto hoy y recibe una propuesta sin compromiso.
         </p>
         <a href="{{ route('contact') }}"
-           class="inline-block bg-white dark:bg-slate-100 text-blue-600 dark:text-blue-700 font-semibold px-10 py-3 rounded-lg hover:bg-blue-50 dark:hover:bg-slate-200 transition btn-hover-effect animate-on-scroll">
+           class="inline-block bg-slate-100 text-blue-700 font-semibold px-10 py-3 rounded-lg hover:bg-slate-200 transition btn-hover-effect animate-on-scroll">
             Solicitar cotización gratis
         </a>
     </div>

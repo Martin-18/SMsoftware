@@ -8,7 +8,7 @@
     </button>
 
     {{-- Chat Box --}}
-    <div id="whatsapp-chat" class="hidden absolute bottom-20 right-0 w-80 bg-white dark:bg-slate-900 rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 transform scale-95 opacity-0">
+    <div id="whatsapp-chat" class="hidden absolute bottom-20 right-0 w-80 bg-slate-900 rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 transform scale-95 opacity-0">
         {{-- Header --}}
         <div class="bg-green-500 text-white p-4 flex items-center gap-3">
             <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
@@ -28,8 +28,8 @@
         </div>
 
         {{-- Body --}}
-        <div class="p-4 bg-white dark:bg-slate-900">
-            <p class="text-sm text-slate-600 dark:text-slate-300 mb-4">
+        <div class="p-4 bg-slate-900">
+            <p class="text-sm text-slate-300 mb-4">
                 ¡Hola! 👋 ¿En qué podemos ayudarte hoy?
             </p>
             <a href="https://wa.me/573105341232?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20sus%20servicios"

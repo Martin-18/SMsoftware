@@ -19,7 +19,11 @@ class ContactController extends Controller
 
     public function store(StoreContactRequest $request): RedirectResponse
     {
-        $contact = Contact::create($request->validated());
+        // Se guarda la fecha de la autorización como prueba (Ley 1581 de 2012, Decreto 1377 de 2013).
+        $contact = Contact::create([
+            ...$request->safe()->except('privacy'),
+            'privacy_accepted_at' => now(),
+        ]);
 
         // El mensaje ya quedó guardado: si el correo falla, se registra el error sin romper la página.
         try {

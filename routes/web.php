@@ -13,6 +13,7 @@ Route::get('/ciberseguridad', [ServiceController::class, 'cybersecurity'])->name
 Route::get('/servicios-tecnicos', [ServiceController::class, 'technicalServices'])->name('technical.services');
 Route::get('/contacto', [ContactController::class, 'show'])->name('contact');
 Route::post('/contacto', [ContactController::class, 'store'])->name('contact.store')->middleware('throttle:5,1');
+Route::view('/politica-de-datos', 'privacy')->name('privacy');
 
 // ─── Auth admin
 Route::get('/admin', [AdminController::class, 'showLoginForm'])->name('admin.login');

@@ -18,10 +18,12 @@ class Contact extends Model
         'service_interest',
         'message',
         'read',
+        'privacy_accepted_at',
     ];
 
     protected $casts = [
         'read' => 'boolean',
+        'privacy_accepted_at' => 'datetime',
     ];
 
     // Label legible para la categoría de interés

@@ -15,11 +15,20 @@ function validContactData(array $overrides = []): array
         'phone' => '300 123 4567',
         'service_interest' => 'servicios_tecnicos',
         'message' => 'Necesito mantenimiento para tres computadores de mi oficina.',
+        'privacy' => '1',
     ], $overrides);
 }
 
+test('the contact form shows the privacy notice and consent checkbox', function () {
+    $this->get(route('contact'))
+        ->assertSee('este formulario recoge tus datos personales')
+        ->assertSee('name="privacy"', false)
+        ->assertSee(route('privacy'), false);
+});
+
 test('a visitor can send a contact message', function () {
     Mail::fake();
+    $this->freezeSecond();
 
     $this->post(route('contact.store'), validContactData())
         ->assertRedirect(route('contact'))
@@ -29,7 +38,8 @@ test('a visitor can send a contact message', function () {
 
     expect($contact->name)->toBe('Carlos Gómez')
         ->and($contact->service_label)->toBe('Servicios Técnicos')
-        ->and($contact->read)->toBeFalse();
+        ->and($contact->read)->toBeFalse()
+        ->and($contact->privacy_accepted_at->equalTo(now()))->toBeTrue();
 
     Mail::assertSent(ContactNotification::class, fn (ContactNotification $mail) => $mail->hasTo(config('mail.from.address')));
 });
@@ -65,4 +75,5 @@ test('invalid contact data is rejected', function (array $overrides, string $fie
     'teléfono inválido' => [['phone' => '12345'], 'phone'],
     'servicio desconocido' => [['service_interest' => 'hackeo'], 'service_interest'],
     'mensaje corto' => [['message' => 'Hola'], 'message'],
+    'sin autorización de datos' => [['privacy' => null], 'privacy'],
 ]);

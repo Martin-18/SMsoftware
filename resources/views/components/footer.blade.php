@@ -45,6 +45,7 @@
 
         <div class="border-t border-slate-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-600">
             <p>&copy; {{ date('Y') }} SMsoftware. Todos los derechos reservados.</p>
+            <a href="{{ route('privacy') }}" class="hover:text-slate-300 transition">Política de tratamiento de datos</a>
             <p>Hecho con ❤️ en el Quindío</p>
         </div>
     </div>

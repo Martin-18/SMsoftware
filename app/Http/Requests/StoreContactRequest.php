@@ -19,6 +19,7 @@ class StoreContactRequest extends FormRequest
             'phone' => ['nullable', 'regex:/^(\+57\s?)?(\d{3}\s?\d{3}\s?\d{4})$/'],
             'service_interest' => ['required', 'in:diseno,ciberseguridad,servicios_tecnicos,otro'],
             'message' => ['required', 'string', 'min:10', 'max:2000'],
+            'privacy' => ['accepted'],
         ];
     }
 
@@ -34,6 +35,7 @@ class StoreContactRequest extends FormRequest
             'service_interest.in' => 'Servicio no válido.',
             'message.required' => 'El mensaje es obligatorio.',
             'message.min' => 'El mensaje debe tener al menos 10 caracteres.',
+            'privacy.accepted' => 'Debes autorizar el tratamiento de tus datos personales para enviar el mensaje.',
         ];
     }
 }

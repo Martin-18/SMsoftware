@@ -10,7 +10,12 @@ test('public pages load successfully', function (string $routeName) {
     'ciberseguridad' => 'cybersecurity',
     'servicios técnicos' => 'technical.services',
     'contacto' => 'contact',
+    'política de datos' => 'privacy',
 ]);
+
+test('the footer links to the privacy policy', function () {
+    $this->get(route('home'))->assertSee(route('privacy'), false);
+});
 
 test('the header links to the contact page', function () {
     $this->get(route('home'))

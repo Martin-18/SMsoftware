@@ -33,6 +33,14 @@
                 <span class="font-semibold text-slate-300 w-24">Recibido:</span>
                 <span>{{ $contact->created_at->format('d/m/Y \a \l\a\s H:i') }}</span>
             </div>
+            <div class="flex gap-2">
+                <span class="font-semibold text-slate-300 w-24">Datos:</span>
+                @if($contact->privacy_accepted_at)
+                    <span class="text-green-400">Autorizó el tratamiento el {{ $contact->privacy_accepted_at->format('d/m/Y H:i') }}</span>
+                @else
+                    <span class="text-amber-400">Sin autorización registrada (mensaje anterior a la política)</span>
+                @endif
+            </div>
         </div>
 
         <div class="bg-slate-800 rounded-xl p-6 border border-slate-700">

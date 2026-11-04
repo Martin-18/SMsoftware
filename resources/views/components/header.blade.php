@@ -24,11 +24,16 @@
                class="hover:text-blue-400 transition {{ request()->routeIs('technical.services') ? 'text-blue-400 font-semibold' : '' }}">
                 Servicios Técnicos
             </a>
+            <a href="{{ route('contact') }}"
+               class="hover:text-blue-400 transition {{ request()->routeIs('contact') ? 'text-blue-400 font-semibold' : '' }}">
+                Contacto
+            </a>
         </nav>
 
         {{-- Hamburguesa mobile --}}
         <div class="md:hidden flex items-center">
-            <button class="text-2xl text-slate-300 p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <button type="button" class="text-2xl text-slate-300 p-2" aria-label="Abrir menú" aria-controls="mobile-menu" aria-expanded="false"
+                    onclick="const menu = document.getElementById('mobile-menu'); menu.classList.toggle('hidden'); this.setAttribute('aria-expanded', !menu.classList.contains('hidden'));">
                 ☰
             </button>
         </div>
@@ -47,6 +52,9 @@
         </a>
         <a href="{{ route('technical.services') }}" class="block text-slate-300 {{ request()->routeIs('technical.services') ? 'text-blue-400 font-semibold' : '' }}">
             Servicios Técnicos
+        </a>
+        <a href="{{ route('contact') }}" class="block text-slate-300 {{ request()->routeIs('contact') ? 'text-blue-400 font-semibold' : '' }}">
+            Contacto
         </a>
     </div>
 </header>

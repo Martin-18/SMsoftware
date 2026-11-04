@@ -2,6 +2,8 @@
 
 @section('content')
 <div class="container mx-auto px-6 py-12">
+    <x-admin-nav />
+
 
     <div class="flex justify-between items-center mb-8">
         <h1 class="text-3xl font-bold text-white">Gestión de Servicios</h1>

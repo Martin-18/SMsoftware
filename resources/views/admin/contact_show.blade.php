@@ -2,6 +2,8 @@
 
 @section('content')
 <div class="container mx-auto px-6 py-12">
+    <x-admin-nav />
+
     <div class="max-w-2xl mx-auto bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-800">
 
         <a href="{{ route('admin.contacts') }}" class="text-blue-400 hover:underline mb-6 inline-block text-sm">

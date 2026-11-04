@@ -20,12 +20,12 @@
 
             {{-- Nombre --}}
             <div>
-                <label class="block text-sm font-semibold text-slate-300 mb-2">
+                <label for="name" class="block text-sm font-semibold text-slate-300 mb-2">
                     Nombre completo <span class="text-red-400">*</span>
                 </label>
-                <input type="text" name="name" value="{{ old('name') }}"
+                <input type="text" id="name" name="name" autocomplete="name" value="{{ old('name') }}"
                        placeholder="Ej: Carlos Gómez"
-                       class="w-full px-4 py-3 rounded-lg border {{ $errors->has('name') ? 'border-red-400 bg-red-50' : 'border-slate-700' }} bg-slate-800 text-white focus:border-blue-500 outline-none transition">
+                       class="w-full px-4 py-3 rounded-lg border {{ $errors->has('name') ? 'border-red-400' : 'border-slate-700' }} bg-slate-800 text-white focus:border-blue-500 outline-none transition">
                 @error('name')
                     <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                 @enderror
@@ -34,36 +34,40 @@
             {{-- Email + Teléfono --}}
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <label class="block text-sm font-semibold text-slate-300 mb-2">
+                    <label for="email" class="block text-sm font-semibold text-slate-300 mb-2">
                         Correo electrónico <span class="text-red-400">*</span>
                     </label>
-                    <input type="email" name="email" value="{{ old('email') }}"
+                    <input type="email" id="email" name="email" autocomplete="email" value="{{ old('email') }}"
                            placeholder="tucorreo@ejemplo.com"
-                           class="w-full px-4 py-3 rounded-lg border {{ $errors->has('email') ? 'border-red-400 bg-red-50' : 'border-slate-700' }} bg-slate-800 text-white focus:border-blue-500 outline-none transition">
+                           class="w-full px-4 py-3 rounded-lg border {{ $errors->has('email') ? 'border-red-400' : 'border-slate-700' }} bg-slate-800 text-white focus:border-blue-500 outline-none transition">
                     @error('email')
                         <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                     @enderror
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold text-slate-300 mb-2">
+                    <label for="phone" class="block text-sm font-semibold text-slate-300 mb-2">
                         Teléfono <span class="text-slate-500 font-normal">(opcional)</span>
                     </label>
-                    <input type="tel" name="phone" value="{{ old('phone') }}"
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" value="{{ old('phone') }}"
                            placeholder="+57 300 000 0000"
-                           class="w-full px-4 py-3 rounded-lg border border-slate-700 bg-slate-800 text-white focus:border-blue-500 outline-none transition">
+                           class="w-full px-4 py-3 rounded-lg border {{ $errors->has('phone') ? 'border-red-400' : 'border-slate-700' }} bg-slate-800 text-white focus:border-blue-500 outline-none transition">
+                    @error('phone')
+                        <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    @enderror
                 </div>
             </div>
 
             {{-- Servicio --}}
             <div>
-                <label class="block text-sm font-semibold text-slate-300 mb-2">
+                <label for="service_interest" class="block text-sm font-semibold text-slate-300 mb-2">
                     ¿Qué servicio te interesa? <span class="text-red-400">*</span>
                 </label>
-                <select name="service_interest"
-                        class="w-full px-4 py-3 rounded-lg border {{ $errors->has('service_interest') ? 'border-red-400 bg-red-50' : 'border-slate-700' }} bg-slate-800 text-white focus:border-blue-500 outline-none transition">
+                <select id="service_interest" name="service_interest"
+                        class="w-full px-4 py-3 rounded-lg border {{ $errors->has('service_interest') ? 'border-red-400' : 'border-slate-700' }} bg-slate-800 text-white focus:border-blue-500 outline-none transition">
                     <option value="">Selecciona una opción...</option>
                     <option value="diseno"         {{ old('service_interest') === 'diseno'         ? 'selected' : '' }}>Diseño Web</option>
                     <option value="ciberseguridad" {{ old('service_interest') === 'ciberseguridad' ? 'selected' : '' }}>Ciberseguridad</option>
+                    <option value="servicios_tecnicos" {{ old('service_interest') === 'servicios_tecnicos' ? 'selected' : '' }}>Servicios Técnicos</option>
                     <option value="otro"           {{ old('service_interest') === 'otro'           ? 'selected' : '' }}>Otro / No sé aún</option>
                 </select>
                 @error('service_interest')
@@ -73,12 +77,12 @@
 
             {{-- Mensaje --}}
             <div>
-                <label class="block text-sm font-semibold text-slate-300 mb-2">
+                <label for="message" class="block text-sm font-semibold text-slate-300 mb-2">
                     Mensaje <span class="text-red-400">*</span>
                 </label>
-                <textarea name="message" rows="5"
+                <textarea id="message" name="message" rows="5"
                           placeholder="Cuéntanos brevemente tu proyecto o necesidad..."
-                          class="w-full px-4 py-3 rounded-lg border {{ $errors->has('message') ? 'border-red-400 bg-red-50' : 'border-slate-700' }} bg-slate-800 text-white focus:border-blue-500 outline-none transition resize-none">{{ old('message') }}</textarea>
+                          class="w-full px-4 py-3 rounded-lg border {{ $errors->has('message') ? 'border-red-400' : 'border-slate-700' }} bg-slate-800 text-white focus:border-blue-500 outline-none transition resize-none">{{ old('message') }}</textarea>
                 @error('message')
                     <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                 @enderror

@@ -2,10 +2,15 @@
 
 namespace App\Models;
 
+use Database\Factories\ContactFactory;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Contact extends Model
 {
+    /** @use HasFactory<ContactFactory> */
+    use HasFactory;
+
     protected $fillable = [
         'name',
         'email',
@@ -23,9 +28,10 @@ class Contact extends Model
     public function getServiceLabelAttribute(): string
     {
         return match ($this->service_interest) {
-            'diseno'          => 'Diseño Web',
-            'ciberseguridad'  => 'Ciberseguridad',
-            default           => 'Otro',
+            'diseno' => 'Diseño Web',
+            'ciberseguridad' => 'Ciberseguridad',
+            'servicios_tecnicos' => 'Servicios Técnicos',
+            default => 'Otro',
         };
     }
 }

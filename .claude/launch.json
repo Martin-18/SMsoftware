@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "plantilla-restaurante",
+      "runtimeExecutable": "php",
+      "runtimeArgs": ["C:/xampp/htdocs/plantilla-restaurante/artisan", "serve", "--host=127.0.0.1", "--port=8010"],
+      "port": 8010
+    },
+    {
+      "name": "plantilla-finca",
+      "runtimeExecutable": "php",
+      "runtimeArgs": ["C:/xampp/htdocs/plantilla-finca/artisan", "serve", "--host=127.0.0.1", "--port=8020"],
+      "port": 8020
+    },
+    {
+      "name": "practica1",
+      "runtimeExecutable": "php",
+      "runtimeArgs": ["artisan", "serve", "--host=127.0.0.1", "--port=8000"],
+      "port": 8000
+    }
+  ]
+}

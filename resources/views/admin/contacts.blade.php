@@ -2,6 +2,8 @@
 
 @section('content')
 <div class="container mx-auto px-6 py-12">
+    <x-admin-nav />
+
 
     <div class="flex justify-between items-center mb-8">
         <div>
@@ -38,7 +40,7 @@
             <tbody>
                 @forelse($contacts as $contact)
                     <tr class="border-b border-slate-700 hover:bg-slate-800 transition
-                               {{ !$contact->read ? 'bg-blue-50/40' : '' }}">
+                               {{ !$contact->read ? 'bg-blue-900/20' : '' }}">
                         <td class="px-6 py-4 font-medium text-white">
                             {{ !$contact->read ? '● ' : '' }}{{ $contact->name }}
                         </td>

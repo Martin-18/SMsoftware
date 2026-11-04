@@ -4,15 +4,21 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class AdminMiddleware
 {
-    public function handle(Request $request, Closure $next)
+    /**
+     * Redirect visitors without an admin session to the login form.
+     *
+     * @param  Closure(Request): (Response)  $next
+     */
+    public function handle(Request $request, Closure $next): Response
     {
-        // Si no está logueado en la sesión, redirigir al login
-        if (!$request->session()->has('admin_logged_in')) {
-            return redirect('/admin-login');
+        if (! $request->session()->get('admin_logged_in')) {
+            return redirect()->route('admin.login');
         }
+
         return $next($request);
     }
 }

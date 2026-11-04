@@ -11,11 +11,11 @@
             </div>
         @endif
 
-        <form action="/admin" method="POST">
+        <form action="{{ route('admin.login.post') }}" method="POST">
             @csrf
             <div class="mb-4">
-                <label class="block text-sm font-medium text-slate-300 mb-2">Contraseña</label>
-                <input type="password" name="password" required 
+                <label for="password" class="block text-sm font-medium text-slate-300 mb-2">Contraseña</label>
+                <input type="password" id="password" name="password" required autocomplete="current-password" 
                     class="w-full px-4 py-3 rounded-lg border border-slate-700 bg-slate-800 text-white focus:border-blue-500 outline-none transition">
             </div>
             <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 rounded-lg transition">

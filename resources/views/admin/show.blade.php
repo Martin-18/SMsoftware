@@ -2,8 +2,10 @@
 
 @section('content')
 <div class="container mx-auto px-6 py-12">
+    <x-admin-nav />
+
     <div class="max-w-2xl mx-auto bg-slate-900 p-8 rounded-2xl shadow-sm border border-slate-800">
-        <a href="/admin/services" class="text-blue-400 hover:underline mb-4 inline-block">&larr; Volver al panel</a>
+        <a href="{{ route('admin.services') }}" class="text-blue-400 hover:underline mb-4 inline-block">&larr; Volver al panel</a>
         
         @if($service->image)
         <div class="mb-6">
